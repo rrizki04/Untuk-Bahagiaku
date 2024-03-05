@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+</head>
+<body center>
+    <div class="greetings1">
+        <span>suka heran kenapa orang" bisa mikir kata" gombal</span><br>
+        <span>sedangkan aku cuma bisa mikirin kamu♡</span><br>
+    </div>
+    <script>
+        // Fungsi untuk mengalihkan ke halaman lain setelah waktu tertentu (dalam milidetik)
+        function redirect() {
+          window.location.href = "flower.html";
+        }
+        
+        // Panggil fungsi redirect setelah 5 detik (5000 milidetik)
+        setTimeout(redirect, 11000);
+    </script>
+
+    <!-- Tempat untuk menampilkan hitung mundur detik -->
+    <p id="countdown"></p>
+
+<script>
+    // Tentukan jumlah detik untuk hitung mundur
+    var secondsLeft = 10; // Ubah angka ini sesuai kebutuhan Anda
+
+    // Update hitung mundur setiap detik
+    var countdownInterval = setInterval(function() {
+    // Tampilkan hitung mundur di dalam elemen 'countdown'
+    var countdownElement = document.getElementById('countdown');
+    countdownElement.innerHTML = secondsLeft + " detik ";
+
+    // Kurangi jumlah detik
+    secondsLeft--;
+
+    // Saat waktu habis, hentikan hitung mundur
+  if (secondsLeft < 0) {
+    clearInterval(countdownInterval);
+    countdownElement.innerHTML = "";
+    }
+    }, 1000); // Atur interval pembaruan hitung mundur setiap detik
+</script>
+
+</body>
+</html>
